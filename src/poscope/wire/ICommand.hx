@@ -1,4 +1,4 @@
-package wire;
+package  poscope.wire;
 using tink.CoreApi;
 interface ICommand<Z> {
 

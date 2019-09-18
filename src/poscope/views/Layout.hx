@@ -1,4 +1,4 @@
-package views;
+package  poscope.views;
 import tink.template.Html;
 using Lambda;
 

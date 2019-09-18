@@ -1,4 +1,4 @@
-package wire;
+package  poscope.wire;
 
 import tink.template.Html;
 interface ILayout{

@@ -1,4 +1,4 @@
-package wire;
+package  poscope.wire;
 import js.html.*;
 #if !macro
 import js.Browser.*;

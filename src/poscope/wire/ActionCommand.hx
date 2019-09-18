@@ -1,4 +1,4 @@
-package wire;
+package poscope.wire;
 
 abstract ActionCommand(String) from String to String{
 
