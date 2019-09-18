@@ -1,0 +1,6 @@
+(:static function render():)
+<div class="ui sticky">
+      <h1>HOME</h1>
+    </div>
+    
+(:end:)

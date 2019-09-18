@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    (:head:)
+<body>
+<div class="maincontainer" id="(:id:)">
+    
+    <div class="container">
+        (:header:)
+        (:menu:)
+        (: viewContent :)
+        (: footer :)
+    </div>
+</div>
+</body>
+</html>

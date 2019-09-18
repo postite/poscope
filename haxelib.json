@@ -1,0 +1,15 @@
+{
+   "name": "poscope",
+   "url" : "http://github.com/postite/poscope",
+   "license": "MIT",
+   "tags": ["web","layout"],
+   "description": "layout easysness",
+   "version": "0.0.1",
+   "classPath": "src/",
+   "releasenote": "wip.",
+   "contributors": ["postite"],
+   "dependencies": {
+     "tink_template":"",
+     "tink_core": ""
+   }
+ }

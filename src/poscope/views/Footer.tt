@@ -1,0 +1,5 @@
+(:static function render():)
+<div id="footer" class="ui sticky">
+     <h1>Footer</h1>
+    </div>
+(:end:)

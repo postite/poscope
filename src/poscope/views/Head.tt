@@ -1,0 +1,26 @@
+(: static function render(scripts:Array<String>,styles:Array<String>,actions:String) :)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="   crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    (:for scr in scripts:)
+    <script src="(:scr:)"></script>
+    (:end :)
+   
+    (:for style in styles:)
+    <link rel="stylesheet" href="(:style:)">
+    (:end :)
+    <script>
+    var actions=
+    "(: actions:)";
+    
+    </script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleme.css">
+    <script src="/client.js"></script>
+</head>
+(:end :)

@@ -1,0 +1,5 @@
+-cp src
+-lib tink_templa
+-D analyzer-optimize
+-main Main
+--interp
