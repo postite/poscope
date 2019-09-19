@@ -1,5 +1,7 @@
 -cp src
--lib tink_templa
+-cp tests
+-lib tink_template
+-lib utest
 -D analyzer-optimize
--main Main
+-main RunAll
 --interp
