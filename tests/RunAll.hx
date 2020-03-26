@@ -85,6 +85,17 @@ class TestCase1 extends utest.Test{
      
    }
 
+   public function testCleanAfterScript(){
+      Actor.defaultLayout=new poscope.views.Layout();
+      Actor.defaultHead= new poscope.views.Head();
+      var home=Home.render().withLayout().addScript("pop.js").cleanAfter().render();
+      Assert.stringContains("pop.js",home);//for home
+      home=Home.render().withLayout().render();
+      Assert.isFalse(StringTools.contains(home,"pop.js"),home);
+      Assert.isFalse(Actor.scripts.indexOf("pop.js")==1);//for layout
+     
+   }
+
    public function testMultiActions(){
       Actor.defaultLayout=new poscope.views.Layout();
       Actor.defaultHead= new poscope.views.Head();

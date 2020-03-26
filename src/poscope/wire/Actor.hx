@@ -12,6 +12,9 @@ class Actor{
     public static var styles:Array<String>=[];
 
     @:isVar public static var defaultLayout(default,set):ILayout;
+     @:isVar public static var defaultHead(default,set):IHead;
+
+
     public function new(){
 
     }
@@ -19,7 +22,7 @@ class Actor{
         return defaultLayout=layout;
     }
 
-    @:isVar public static var defaultHead(default,set):IHead;
+   
     
      static function set_defaultHead(head:IHead){
         return defaultHead=head;
@@ -36,23 +39,36 @@ class Actor{
             return layout;
        
     }
-    public static function cleanAfter(layout:ILayout):ILayout{
-        
-        update(layout);
-        actions.clear();
-        actionString="";
-        return layout;
-    }
 
     private static  function addAct(layout:ILayout,actions:String):ILayout{
         actionString=actions;
         update(layout);
         return layout;
     }
-    public static function clearScripts(layout:ILayout,script:String):ILayout{
+
+    public static function cleanAfter(layout:ILayout):ILayout{
+        
+        clearScripts(layout,false);
+        clearStyles(layout,false);
+        actions.clear();
+        actionString="";
+        return layout;
+    }
+
+    public static function clearStyles(layout:ILayout,?_update:Bool=true):ILayout{
+        
+        while(styles.length>0)
+            styles.pop();
+        if( _update)
+        update(layout);
+        return layout;
+    }
+    
+    public static function clearScripts(layout:ILayout,?_update:Bool=true):ILayout{
         
         while(scripts.length>0)
             scripts.pop();
+        if( _update)
         update(layout);
         return layout;
     }
@@ -81,7 +97,7 @@ class Actor{
             return layout;
 
     }
-    //@todo decouple Head ici....
+    
     public dynamic static function update(layout:ILayout){
         //layout.head=poscope.views.Head.render(scripts,styles,actions);
     
