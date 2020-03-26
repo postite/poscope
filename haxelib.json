@@ -4,7 +4,7 @@
    "license": "MIT",
    "tags": ["web","layout"],
    "description": "layout easysness",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "classPath": "src/",
    "releasenote": "wip.",
    "contributors": ["postite"],
